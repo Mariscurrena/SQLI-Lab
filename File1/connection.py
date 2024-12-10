@@ -10,11 +10,15 @@ connection = pymysql.connect(user='root',
 cur = connection.cursor()
 
 #Execute a querir
-cur.execute("SELECT * FROM firsttable;")
+cur.execute("SELECT" + " name " + "FROM firsttable;")
+
+#Print only a value
+for var in cur.fetchall():
+    print(var)
 
 #Print all querie's values
-for idk, name, passd in cur.fetchall():
-    print(idk," | ",name," | ",passd)
+#for idk, name, passd in cur.fetchall():
+#    print(idk," | ",name," | ",passd)
 
 #Finish the connection
 connection.close()
