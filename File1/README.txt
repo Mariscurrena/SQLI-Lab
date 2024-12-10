@@ -1,3 +1,5 @@
+Hello there, this is the first file. Enjoy :)
+
 Step 1: Install a relational database, in this case, I will be using MySQL Server into an Ubuntu Environment.
     sudo apt install mysql-server -y
     sudo systemctl status mysql
