@@ -6,7 +6,7 @@ from PIL import Image, ImageTk
 #Window COnfiguration
 window = tkinter.Tk()
 window.geometry("1200x720")
-window.title("MySQL Query using Tkinter")
+window.title("Code Injection Lab - Secure")
 window.columnconfigure(0, weight=3)
 window.columnconfigure(1, weight=1)
 window.columnconfigure(2, weight=1)
@@ -15,7 +15,7 @@ window.rowconfigure(0, weight=1)
 window.rowconfigure(1, weight=1)
 window.rowconfigure(2, weight=1)
 window.rowconfigure(3, weight=1)
-window.configure(background="#ffffff")
+window.configure(background="#e8efff")
 
 #MySQL Connection
 connection = pymysql.connect(user='root', 
@@ -34,7 +34,7 @@ def validate():
         print("Values are not in the right format")
         return
 
-    if "OR" or "--" or "1'='1" in password:
+    if "OR" in password:
         messagebox.showinfo("Warning!!!","We detected that you are trying to exploit SQLI vulnerabilities. That's ILLEGAL!!")
     else:
         ## Parametrization is one of the greatest ways to prevent an SQL Injection
@@ -50,19 +50,19 @@ def validate():
 
 
 #Forms Declaration
-Login_Label = tkinter.Label(window, text="LOGIN", font="Helvetica 60 bold", bg="#ffffff", fg="#1A6AFF")
-User_Label = tkinter.Label(window, text="Username", bg="#ffffff", fg="#1A6AFF", font="Helvetica 20 bold")
-Pass_Label = tkinter.Label(window, text="Password", bg="#ffffff", fg="#1A6AFF", font="Helvetica 20 bold")
+Login_Label = tkinter.Label(window, text="LOGIN", font="Helvetica 60 bold", bg="#e8efff", fg="#1A6AFF")
+User_Label = tkinter.Label(window, text="Username", bg="#e8efff", fg="#1A6AFF", font="Helvetica 20 bold")
+Pass_Label = tkinter.Label(window, text="Password", bg="#e8efff", fg="#1A6AFF", font="Helvetica 20 bold")
 User_Entry = tkinter.Entry(window, bg="#f2f2f2", fg="#000a2d", font="Helvetica 22 bold")
 Pass_Entry = tkinter.Entry(window, bg="#f2f2f2", fg="#000a2d", font="Helvetica 22 bold")
-Button = tkinter.Button(window, text="Submit", fg="#ffffff", bg="#1A6AFF", font="Helvetica 30", padx=20, pady=10, command=validate)
-Label_SQL = tkinter.Label(window, text="SQL Injection", font="Helvetica 45 bold", bg="#ffffff", fg="#1A6AFF")
+Button = tkinter.Button(window, text="Submit", fg="#e8efff", bg="#1A6AFF", font="Helvetica 30", padx=20, pady=10, command=validate)
+Label_SQL = tkinter.Label(window, text="SQL Injection", font="Helvetica 45 bold", bg="#e8efff", fg="#1A6AFF")
 
 #Image Declaration
 image = Image.open("./logo.png")
 image = image.resize((300,300))
 image_tk = ImageTk.PhotoImage(image)
-Image_Label = tkinter.Label(window, image=image_tk, bg="#ffffff")
+Image_Label = tkinter.Label(window, image=image_tk, bg="#e8efff")
 
 #Grid declaration
 Login_Label.grid(column=1, row=0, columnspan=3, sticky='nsew')

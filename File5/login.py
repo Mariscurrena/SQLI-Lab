@@ -6,7 +6,7 @@ from PIL import Image, ImageTk
 #Window COnfiguration
 window = tkinter.Tk()
 window.geometry("1200x720")
-window.title("MySQL Query using Tkinter")
+window.title("Code Injection Lab - Unsecure")
 window.columnconfigure(0, weight=3)
 window.columnconfigure(1, weight=1)
 window.columnconfigure(2, weight=1)
