@@ -7,7 +7,18 @@ Into this repository it will be storage all the files and methodology to replica
 The following part describes all the steps that can be follow in order to understand the construction of the lab and the workflow that an SQLI follow.
 
 *File 1: SQL query using Python.
+
 *File 2: Simple Forms using Tkinter (TextField, Label, Button, Alerts, Images)
+
 *File 3: Print a SQL query value into a Tkinter Form.
+
 *File 4: Tkinter Login Form.
+
 *File 5: SQL Injection suceptible login.
+
+Have a good time exploring this basic project built to explain SQL injections and hardcoded password vulnerabilities.
+
+Regards,
+Angel
+
+PS: More vulnerabilities labs soon c:
