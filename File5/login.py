@@ -27,7 +27,7 @@ def validate():
     user= str("'" + User_Entry.get() + "'")
     password= str("'" + Pass_Entry.get() + "'")
     cur = connection.cursor()
-    query = "SELECT * FROM firsttable WHERE name = {} AND password = {}".format(user, password)
+    query = f"SELECT * FROM firsttable WHERE name = {user} AND password = {password}"
     cur.execute(query)
     results = cur.fetchall()
     if results:
