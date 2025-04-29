@@ -6,6 +6,8 @@ DB_User="root"
 DB_Pass="admin1234"
 DB_Name="Prueb1"
 DB_PATH="./Prueb1.sql"
+Python_User="pythonuser"
+Python_Pass="pass1234"
 
 ### Is MySQL Installed?
 if ! command -v mysql &> /dev/null; then
@@ -41,7 +43,13 @@ fi
 ### Creating DB if not exist
 sudo mysql -u "$DB_User" -p"$DB_Pass" -e "CREATE DATABASE IF NOT EXISTS ${DB_Name};"
 echo -e "\033[0;34m--> Adding user privileges:\033[0m"
+
+### Creating new user with privileges
+echo -e "\033[0;34m--> Creating new user and granting privileges...\033[0m"
+sudo mysql -u "$DB_User" -p"$DB_Pass" -e "CREATE USER IF NOT EXISTS '$Python_User'@'localhost' IDENTIFIED BY '$Python_Pass'; GRANT ALL PRIVILEGES ON ${DB_Name}.* TO '$Python_User'@'localhost'; FLUSH PRIVILEGES;"
+
 ### Importing DB
+echo -e "\033[0;34m--> Importing ${DB_Name} database...\033[0m"
 sudo mysql -u "$DB_User" -p"$DB_Pass" "$DB_Name" < "$DB_PATH"
 
 echo -e "\033[0;32m--> DB Import Successful!\033[0m\n"

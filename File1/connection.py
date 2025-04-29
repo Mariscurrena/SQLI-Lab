@@ -1,8 +1,8 @@
 import pymysql
 
 #Connection variable and authentication
-connection = pymysql.connect(user='root', 
-                             passwd='admin1234',
+connection = pymysql.connect(user='pythonuser', 
+                             passwd='pass1234',
                              host='localhost',
                              db='Prueb1')
 
