@@ -39,9 +39,9 @@ else
 fi
 
 ### Creating DB if not exist
-mysql -u "$DB_User" -p"$DB_Pass" -e "CREATE DATABASE IF NOT EXISTS ${DB_Name};"
+sudo mysql -u "$DB_User" -p"$DB_Pass" -e "CREATE DATABASE IF NOT EXISTS ${DB_Name};"
 echo -e "\033[0;34m--> Adding user privileges:\033[0m"
 ### Importing DB
-mysql -u "$DB_User" -p "$DB_Pass" "$DB_Name" < "$DB_PATH"
+sudo mysql -u "$DB_User" -p"$DB_Pass" "$DB_Name" < "$DB_PATH"
 
 echo -e "\033[0;32m--> DB Import Successful!\033[0m\n"
