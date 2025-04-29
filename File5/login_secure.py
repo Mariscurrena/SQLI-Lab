@@ -18,8 +18,8 @@ window.rowconfigure(3, weight=1)
 window.configure(background="#e8efff")
 
 #MySQL Connection
-connection = pymysql.connect(user='root', 
-                             passwd='admin1234',
+connection = pymysql.connect(user='pythonuser', 
+                             passwd='pass1234',
                              host='localhost',
                              db='Prueb1')
 

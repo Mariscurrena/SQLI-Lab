@@ -18,8 +18,8 @@ window.rowconfigure(3, weight=1)
 window.configure(background="#ffffff")
 
 #MySQL Connection
-connection = pymysql.connect(user='root', 
-                             passwd='admin1234',
+connection = pymysql.connect(user='pythonuser', 
+                             passwd='pass1234',
                              host='localhost',
                              db='Prueb1')
 
@@ -47,7 +47,7 @@ Button = tkinter.Button(window, text="Submit", fg="#ffffff", bg="#1A6AFF", font=
 Label_SQL = tkinter.Label(window, text="SQL Injection", font="Helvetica 45 bold", bg="#ffffff", fg="#1A6AFF")
 
 #Image Declaration
-image = Image.open("./logo.png")
+image = Image.open("/home/steve/Documents/github/SQLI-Lab/File5/logo.png")
 image = image.resize((300,300))
 image_tk = ImageTk.PhotoImage(image)
 Image_Label = tkinter.Label(window, image=image_tk, bg="#ffffff")

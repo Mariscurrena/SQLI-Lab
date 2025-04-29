@@ -12,10 +12,10 @@ window.rowconfigure(1, weight=2)
 window.configure(background="#e1e9f7")
 
 def users(data):
-    connection = pymysql.connect(user='root', 
-                            passwd='admin1234',
-                            host='localhost',
-                            db='Prueb1')
+    connection = pymysql.connect(user='pythonuser', 
+                             passwd='pass1234',
+                             host='localhost',
+                             db='Prueb1')
     cur = connection.cursor()
     cur.execute("SELECT " + data + " FROM firsttable;")
     data = []
