@@ -2,9 +2,9 @@
 
 ### Hello there!
 
->This is a Lab to demonstrate how SQL Injection vulnerabilities can be exploited into login enviroments that do not archieve the security practices like SQL Queries Parametrization, symbols validation, etc.
+>This is a Lab to demonstrate how SQL Injection vulnerabilities can be exploited into unsecure login forms that do not archieve the security practices like SQL Queries Parametrization, symbols validation, etc.
 
-Into this repository it will be storage all the files and methodology to replicate this enviroment by your own using Python and Tkinter.
+Into this repository it will be storage all the files and methodology to replicate this enviroment by your own using Python, Tkinter and MySQL.
 
 The following part describes all the steps that can be follow in order to understand the construction of the lab and the workflow that an SQLI follow.
 
@@ -16,7 +16,11 @@ The following part describes all the steps that can be follow in order to unders
 
 >4. File 4: Tkinter Login Form.
 
->5. File 5: SQL Injection suceptible login.
+>5. File 5: SQL Injection Example.
+
+   > - Insecure login form using simple concatenation and poor validation controls.
+
+   > - Secure login form with query parameterization.
 
 ## Laboratory Images:
 > -Unsecure Form
